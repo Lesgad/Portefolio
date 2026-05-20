@@ -1,7 +1,12 @@
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+
 function App() {
   return (
-    <div className="bg-dark min-h-screen text-white font-sans">
-      <p className="text-center text-primary pt-10">Portfolio — setup OK ✓</p>
+    <div className="bg-white min-h-screen text-gray-900 font-sans flex flex-col">
+      <Navbar />
+      <main className="flex-1" />
+      <Footer />
     </div>
   )
 }
