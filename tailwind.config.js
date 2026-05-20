@@ -15,6 +15,8 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        nunito: ['Nunito', 'sans-serif'],
+        playfair: ['"Playfair Display"', 'serif'],
       },
     },
   },
