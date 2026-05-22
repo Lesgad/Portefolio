@@ -42,6 +42,26 @@ export default function About() {
             défi technique en opportunité de progresser.
           </p>
 
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-block',
+              backgroundColor: '#FDC435',
+              borderRadius: '8px',
+              padding: '8px 24px',
+              fontFamily: 'Nunito, sans-serif',
+              fontWeight: 600,
+              fontSize: '16px',
+              color: '#25282B',
+              textDecoration: 'none',
+              alignSelf: 'flex-start',
+            }}
+          >
+            CV
+          </a>
+
         </div>
 
         {/* Photo + cercle jaune */}
