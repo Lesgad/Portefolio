@@ -52,6 +52,34 @@ export default function Contact() {
         }} />
       </div>
 
+      {/* Formulaire */}
+      <form style={{ width: '400px', margin: '48px auto 0', display: 'flex', flexDirection: 'column', gap: '24px' }} onSubmit={(e) => e.preventDefault()}>
+
+        {/* Nom */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <label style={{ fontFamily: 'Nunito, sans-serif', fontSize: '14px', fontWeight: 600, color: '#25282B' }}>
+            Nom
+          </label>
+          <input
+            type="text"
+            style={{
+              width: '100%',
+              height: '40px',
+              borderRadius: '8px',
+              border: '1px solid #E8ECF4',
+              backgroundColor: '#FFFFFF',
+              paddingLeft: '12px',
+              paddingRight: '12px',
+              fontFamily: 'Nunito, sans-serif',
+              fontSize: '14px',
+              outline: 'none',
+              boxSizing: 'border-box',
+            }}
+          />
+        </div>
+
+      </form>
+
       {/* Réseaux + copyright */}
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', marginTop: '80px' }}>
         <div style={{ display: 'flex', gap: '24px' }}>
