@@ -27,17 +27,12 @@ export default function Navbar() {
                 className="flex flex-col items-center gap-[2px] w-[68px] h-7 justify-center group"
               >
                 <span
-                  className={`text-sm transition-colors ${
-                    index === 0 ? 'text-gray-900 font-medium' : 'text-gray-500 group-hover:text-gray-900'
-                  }`}
+                  className="text-sm transition-colors text-gray-500 group-hover:text-gray-900"
                 >
                   {link.label}
                 </span>
-                {/* Indicateur actif */}
                 <span
-                  className={`h-[2px] w-full rounded-full transition-all ${
-                    index === 0 ? 'bg-gray-900' : 'bg-transparent group-hover:bg-gray-300'
-                  }`}
+                  className="h-[2px] w-full rounded-full transition-all bg-transparent group-hover:bg-gray-300"
                 />
               </a>
             </li>
