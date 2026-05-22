@@ -5,14 +5,16 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="bg-white min-h-screen text-gray-900 font-sans flex flex-col">
+    <>
       <Navbar />
-      <main className="flex-1">
-        <Hero />
-        <About />
-      </main>
-      <Footer />
-    </div>
+      <div className="bg-white min-h-screen text-gray-900 font-sans flex flex-col">
+        <main className="flex-1">
+          <Hero />
+          <About />
+        </main>
+        <Footer />
+      </div>
+    </>
   )
 }
 

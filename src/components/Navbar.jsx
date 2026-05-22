@@ -7,7 +7,7 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <header className="w-full border-b border-gray-200 bg-white">
+    <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, background: 'transparent' }} className="w-full">
       <nav className="max-w-[1440px] mx-auto px-8 h-14 flex items-center justify-between">
 
         {/* Nom / Logo */}

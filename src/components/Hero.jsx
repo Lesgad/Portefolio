@@ -1,7 +1,49 @@
+import yellowBg from '../assets/yellow-bg.png'
+import photoRbg from '../assets/photo_rbg.png'
+
 export default function Hero() {
   return (
-    <section id="accueil" className="w-full bg-white">
-      <div style={{ paddingLeft: '120px', paddingTop: '110px', maxWidth: '606px' }}>
+    <section
+      id="accueil"
+      className="w-full bg-white relative overflow-hidden flex items-center"
+      style={{ minHeight: '700px' }}
+    >
+      {/* Blob jaune + photo contenus dans le même wrapper */}
+      <div
+        style={{
+          position: 'absolute',
+          right: '-80px',
+          top: '-248px',
+          width: '777px',
+          height: '877px',
+          zIndex: 1,
+          pointerEvents: 'none',
+        }}
+      >
+        <img
+          src={yellowBg}
+          alt=""
+          aria-hidden="true"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+        />
+        <img
+          src={photoRbg}
+          alt="Maël Gadou"
+          style={{
+            position: 'absolute',
+            top: '290px',
+            left: '45%',
+            transform: 'translateX(-50%)',
+            width: '310px',
+            height: '280px',
+            objectFit: 'cover',
+            objectPosition: 'top center',
+          }}
+        />
+      </div>
+
+      {/* Contenu texte */}
+      <div style={{ paddingLeft: '120px', paddingTop: '110px', paddingBottom: '110px', maxWidth: '606px', position: 'relative', zIndex: 2 }}>
 
         <span
           style={{
