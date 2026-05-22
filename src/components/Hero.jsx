@@ -44,6 +44,44 @@ export default function Hero() {
           performantes — du code embarqué à la data, en passant par le développement web.
         </p>
 
+        <div style={{ display: 'flex', gap: '12px', marginTop: '24px' }}>
+          <a
+            href="#projets"
+            style={{
+              display: 'inline-block',
+              backgroundColor: '#FDC435',
+              borderRadius: '8px',
+              padding: '10px 24px',
+              fontFamily: 'Nunito, sans-serif',
+              fontWeight: 700,
+              fontSize: '16px',
+              color: '#25282B',
+              textDecoration: 'none',
+            }}
+          >
+            Projets
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/maël-gadou-489678295/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-block',
+              border: '2px solid #25282B',
+              borderRadius: '8px',
+              padding: '10px 24px',
+              fontFamily: 'Nunito, sans-serif',
+              fontWeight: 700,
+              fontSize: '16px',
+              color: '#25282B',
+              textDecoration: 'none',
+            }}
+          >
+            LinkedIn
+          </a>
+        </div>
+
       </div>
     </section>
   )
