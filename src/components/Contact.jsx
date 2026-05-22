@@ -123,6 +123,26 @@ export default function Contact() {
           />
         </div>
 
+        {/* Bouton Envoyer */}
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <button
+            type="submit"
+            style={{
+              backgroundColor: '#FDC435',
+              borderRadius: '8px',
+              padding: '10px 24px',
+              fontFamily: 'Nunito, sans-serif',
+              fontWeight: 700,
+              fontSize: '16px',
+              color: '#25282B',
+              border: 'none',
+              cursor: 'pointer',
+            }}
+          >
+            Envoyer
+          </button>
+        </div>
+
       </form>
 
       {/* Réseaux + copyright */}
