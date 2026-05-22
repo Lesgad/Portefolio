@@ -101,6 +101,28 @@ export default function Contact() {
           />
         </div>
 
+        {/* Message */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <label style={{ fontFamily: 'Nunito, sans-serif', fontSize: '14px', fontWeight: 600, color: '#25282B' }}>
+            Message
+          </label>
+          <textarea
+            rows={5}
+            style={{
+              width: '100%',
+              borderRadius: '8px',
+              border: '1px solid #E8ECF4',
+              backgroundColor: '#FFFFFF',
+              padding: '12px',
+              fontFamily: 'Nunito, sans-serif',
+              fontSize: '14px',
+              resize: 'none',
+              outline: 'none',
+              boxSizing: 'border-box',
+            }}
+          />
+        </div>
+
       </form>
 
       {/* Réseaux + copyright */}
