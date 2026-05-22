@@ -78,6 +78,29 @@ export default function Contact() {
           />
         </div>
 
+        {/* Email */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <label style={{ fontFamily: 'Nunito, sans-serif', fontSize: '14px', fontWeight: 600, color: '#25282B' }}>
+            Email
+          </label>
+          <input
+            type="email"
+            style={{
+              width: '100%',
+              height: '40px',
+              borderRadius: '8px',
+              border: '1px solid #E8ECF4',
+              backgroundColor: '#FFFFFF',
+              paddingLeft: '12px',
+              paddingRight: '12px',
+              fontFamily: 'Nunito, sans-serif',
+              fontSize: '14px',
+              outline: 'none',
+              boxSizing: 'border-box',
+            }}
+          />
+        </div>
+
       </form>
 
       {/* Réseaux + copyright */}
