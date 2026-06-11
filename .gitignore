@@ -12,3 +12,12 @@
 #dossier Node et IDE
 /node_modules
 /.idea
+/dist
+
+# Variables d'environnement (clés Firebase)
+.env
+.env.local
+
+# Clés de compte de service Firebase Admin
+*firebase-adminsdk*.json
+serviceAccountKey.json
