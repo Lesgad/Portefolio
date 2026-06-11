@@ -1,5 +1,12 @@
 import yellowBg from '../assets/yellow-bg.png'
-import photoRbg from '../assets/photo_rbg.png'
+
+function LinkedInIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+    </svg>
+  )
+}
 
 export default function Hero() {
   return (
@@ -8,11 +15,11 @@ export default function Hero() {
       className="w-full bg-white relative overflow-hidden flex items-center"
       style={{ minHeight: '700px' }}
     >
-      {/* Blob jaune + photo contenus dans le même wrapper */}
+      {/* Blob jaune (photo de Maël et Marie incluse dans l'image) */}
       <div
         style={{
           position: 'absolute',
-          right: '-50px',
+          right: '0px',
           top: '-10px',
           width: '830px',
           height: '725px',
@@ -22,23 +29,8 @@ export default function Hero() {
       >
         <img
           src={yellowBg}
-          alt=""
-          aria-hidden="true"
+          alt="Maël Gadou et Marie Tassel"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
-        />
-        <img
-          src={photoRbg}
-          alt="Maël Gadou"
-          style={{
-            position: 'absolute',
-            top: '290px',
-            left: '45%',
-            transform: 'translateX(-50%)',
-            width: '310px',
-            height: '280px',
-            objectFit: 'cover',
-            objectPosition: 'top center',
-          }}
         />
       </div>
 
@@ -54,7 +46,7 @@ export default function Hero() {
             color: '#FDC435',
           }}
         >
-          Etudiant ingénieur
+          Étudiants ingénieurs
         </span>
 
         <h1
@@ -67,7 +59,7 @@ export default function Hero() {
             marginTop: '12px',
           }}
         >
-          Bonjour, je m'appelle<br />Maël Gadou
+          Bonjour, nous sommes<br />Maël & Marie
         </h1>
 
         <p
@@ -81,12 +73,13 @@ export default function Hero() {
             textAlign: 'justify',
           }}
         >
-          Ingénieur Big Data & Machine Learning à l'EFREI Bordeaux, je combine
-          curiosité technique et créativité pour concevoir des solutions numériques
-          performantes — du code embarqué à la data, en passant par le développement web.
+          Étudiants ingénieurs à l'EFREI Bordeaux — Big Data & Machine Learning pour l'un,
+          Logiciel & Systèmes d'Information pour l'autre — nous combinons curiosité technique
+          et créativité pour concevoir des solutions numériques performantes, du code embarqué
+          à la data, en passant par le développement web.
         </p>
 
-        <div style={{ display: 'flex', gap: '12px', marginTop: '24px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '24px' }}>
           <a
             href="#projets"
             style={{
@@ -108,19 +101,38 @@ export default function Hero() {
             href="https://www.linkedin.com/in/maël-gadou-489678295/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn Maël Gadou"
             style={{
-              display: 'inline-block',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '44px',
+              height: '44px',
               border: '2px solid #25282B',
               borderRadius: '8px',
-              padding: '10px 24px',
-              fontFamily: 'Nunito, sans-serif',
-              fontWeight: 700,
-              fontSize: '16px',
               color: '#25282B',
-              textDecoration: 'none',
             }}
           >
-            LinkedIn
+            <LinkedInIcon />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/marie-tassel-8129152bb"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Marie Tassel"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '44px',
+              height: '44px',
+              border: '2px solid #25282B',
+              borderRadius: '8px',
+              color: '#25282B',
+            }}
+          >
+            <LinkedInIcon />
           </a>
         </div>
 

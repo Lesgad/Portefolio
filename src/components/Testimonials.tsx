@@ -55,7 +55,7 @@ export default function Testimonials() {
   const { status, data } = useFirestoreCollection<Testimonial>('testimonials')
 
   return (
-    <section style={{ paddingTop: '80px', paddingBottom: '80px', backgroundColor: '#F5F6FA' }}>
+    <section id="temoignages" style={{ paddingTop: '80px', paddingBottom: '80px', backgroundColor: '#F5F6FA' }}>
       <div style={{ textAlign: 'center' }}>
         <h2 style={{ fontFamily: '"Playfair Display", serif', fontWeight: 700, fontSize: '48px', color: '#25282B', margin: 0 }}>
           Témoignages

@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
+import logo from '../assets/logo.png'
 
 const navLinks = [
   { label: 'À propos', href: '#apropos' },
   { label: 'Projets', href: '#projets' },
+  { label: 'Témoignages', href: '#temoignages' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -54,26 +56,30 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Connexion */}
-        {status === 'authenticated' && (
-          <Link
-            to="/admin"
-            className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            Administration
-          </Link>
-        )}
+        {/* Logo + connexion */}
+        <div className="flex items-center gap-3">
+          <img src={logo} alt="Logo" className="w-8 h-8 rounded-full" />
 
-        {status === 'unauthenticated' && (
-          <button
-            type="button"
-            onClick={() => login()}
-            className="flex items-center gap-2 text-sm text-gray-700 border border-gray-200 rounded-full px-4 py-1.5 hover:bg-gray-50 transition-colors"
-          >
-            <GoogleIcon />
-            <span>Connexion</span>
-          </button>
-        )}
+          {status === 'authenticated' && (
+            <Link
+              to="/admin"
+              className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+            >
+              Administration
+            </Link>
+          )}
+
+          {status === 'unauthenticated' && (
+            <button
+              type="button"
+              onClick={() => login()}
+              className="flex items-center gap-2 text-sm text-gray-700 border border-gray-200 rounded-full px-4 py-1.5 hover:bg-gray-50 transition-colors"
+            >
+              <GoogleIcon />
+              <span>Connexion</span>
+            </button>
+          )}
+        </div>
 
         {error && (
           <span className="absolute top-full right-8 mt-1 text-xs text-red-500 whitespace-nowrap">
