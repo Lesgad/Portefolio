@@ -119,7 +119,7 @@ export default function About() {
             photoSrc={photo}
             name="Maël Gadou"
             role="Ingénieur Big Data & Machine Learning"
-            bio="Étudiant en Ingénieur Big Data & Machine Learning à l'EFREI Bordeaux après un BUT Génie Électrique et Informatique Industrielle à l'IUT d'Angers, je me passionne pour la robotique, l'automatisme et l'intelligence artificielle. Curieux, rigoureux et toujours en quête d'apprentissage, je transforme chaque défi technique en opportunité de progresser."
+            bio="Passionné de robotique et d'automatisme depuis mon BUT Génie Électrique et Informatique Industrielle à l'IUT d'Angers, j'ai rejoint l'EFREI Bordeaux pour me spécialiser en Big Data & Machine Learning. Entre programmation, électronique et cybersécurité, j'aime comprendre comment les systèmes fonctionnent pour mieux les améliorer. En dehors des écrans, on me retrouve aux arts martiaux, au tir sportif ou à bricoler dans mon coin."
             cv="/cv.pdf"
             initials="MG"
           />
@@ -127,7 +127,7 @@ export default function About() {
             photoSrc={photo2}
             name="Marie Tassel"
             role="Ingénieure Logiciel & Systèmes d'Information"
-            bio="Étudiante en Cycle Ingénieur Logiciel et Système d'Information à l'EFREI Bordeaux après un BUT Génie Électrique et Informatique Industrielle, parcours Électronique et Systèmes Embarqués, à l'IUT d'Angers. Curieuse de comprendre le monde qui m'entoure, j'aime concevoir, programmer et tester, avec autonomie et esprit d'équipe."
+            bio="Curieuse de comprendre le monde qui m'entoure, j'ai suivi un BUT Génie Électrique et Informatique Industrielle, parcours Électronique et Systèmes Embarqués, à l'IUT d'Angers, avant de rejoindre le Cycle Ingénieur Logiciel et Systèmes d'Information de l'EFREI Bordeaux. J'aime autant concevoir une carte électronique que développer et tester des outils logiciels, comme lors de mon alternance chez Diebold Nixdorf. Côté loisirs, je grimpe au mur d'escalade et joue du piano."
             cv="/cv2.pdf"
             initials="MT"
             reverse

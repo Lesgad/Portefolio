@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
-import logo from '../assets/logo.png'
 
 const navLinks = [
   { label: 'À propos', href: '#apropos' },
@@ -21,7 +20,7 @@ function GoogleIcon() {
 }
 
 export default function Navbar() {
-  const { status, error, login } = useAuth()
+  const { status, user, error, login } = useAuth()
 
   return (
     <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, background: 'transparent' }} className="w-full">
@@ -32,7 +31,7 @@ export default function Navbar() {
           href="#"
           className="text-gray-900 font-medium text-sm tracking-wide hover:opacity-70 transition-opacity"
         >
-          Maël Gadou
+          Maël Gadou & Marie Tassel
         </a>
 
         {/* Liens de navigation */}
@@ -56,30 +55,33 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Logo + connexion */}
-        <div className="flex items-center gap-3">
-          <img src={logo} alt="Logo" className="w-8 h-8 rounded-full" />
+        {/* Connexion */}
+        {status === 'authenticated' && (
+          <Link
+            to="/admin"
+            className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors"
+          >
+            {user?.photoURL ? (
+              <img src={user.photoURL} alt="" className="w-8 h-8 rounded-full" referrerPolicy="no-referrer" />
+            ) : (
+              <span className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white bg-gray-400">
+                {user?.email?.[0]?.toUpperCase() ?? '?'}
+              </span>
+            )}
+            <span>Administration</span>
+          </Link>
+        )}
 
-          {status === 'authenticated' && (
-            <Link
-              to="/admin"
-              className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-            >
-              Administration
-            </Link>
-          )}
-
-          {status === 'unauthenticated' && (
-            <button
-              type="button"
-              onClick={() => login()}
-              className="flex items-center gap-2 text-sm text-gray-700 border border-gray-200 rounded-full px-4 py-1.5 hover:bg-gray-50 transition-colors"
-            >
-              <GoogleIcon />
-              <span>Connexion</span>
-            </button>
-          )}
-        </div>
+        {status === 'unauthenticated' && (
+          <button
+            type="button"
+            onClick={() => login()}
+            className="flex items-center gap-2 text-sm text-gray-700 border border-gray-200 rounded-full px-4 py-1.5 hover:bg-gray-50 transition-colors"
+          >
+            <GoogleIcon />
+            <span>Connexion</span>
+          </button>
+        )}
 
         {error && (
           <span className="absolute top-full right-8 mt-1 text-xs text-red-500 whitespace-nowrap">

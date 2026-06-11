@@ -1,5 +1,6 @@
 import { Navigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
+import logo from '../assets/logo.png'
 
 interface LocationState {
   from?: { pathname: string }
@@ -17,6 +18,7 @@ export default function LoginPage() {
   return (
     <div className="w-full min-h-screen bg-white flex items-center justify-center">
       <div className="flex flex-col items-center text-center" style={{ gap: '16px' }}>
+        <img src={logo} alt="Logo" className="w-16 h-16 rounded-full" />
         <h1 style={{ fontFamily: '"Playfair Display", serif', fontWeight: 700, fontSize: '32px', color: '#25282B' }}>
           Connexion
         </h1>

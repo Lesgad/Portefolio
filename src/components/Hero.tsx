@@ -73,10 +73,11 @@ export default function Hero() {
             textAlign: 'justify',
           }}
         >
-          Étudiants ingénieurs à l'EFREI Bordeaux — Big Data & Machine Learning pour l'un,
-          Logiciel & Systèmes d'Information pour l'autre — nous combinons curiosité technique
-          et créativité pour concevoir des solutions numériques performantes, du code embarqué
-          à la data, en passant par le développement web.
+          Tous deux étudiants ingénieurs à l'EFREI Bordeaux après un BUT Génie Électrique et
+          Informatique Industrielle à l'IUT d'Angers, nous partageons la même curiosité pour
+          la technique sous toutes ses formes — électronique, automatisme, développement
+          logiciel et data. Ensemble, nous concevons des projets qui allient rigueur
+          d'ingénieur et créativité, du circuit imprimé à l'application web.
         </p>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '24px' }}>
@@ -105,15 +106,19 @@ export default function Hero() {
             style={{
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center',
-              width: '44px',
-              height: '44px',
+              gap: '8px',
+              padding: '10px 16px',
               border: '2px solid #25282B',
               borderRadius: '8px',
               color: '#25282B',
+              textDecoration: 'none',
+              fontFamily: 'Nunito, sans-serif',
+              fontWeight: 700,
+              fontSize: '14px',
             }}
           >
             <LinkedInIcon />
+            <span>Maël</span>
           </a>
 
           <a
@@ -124,15 +129,19 @@ export default function Hero() {
             style={{
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center',
-              width: '44px',
-              height: '44px',
+              gap: '8px',
+              padding: '10px 16px',
               border: '2px solid #25282B',
               borderRadius: '8px',
               color: '#25282B',
+              textDecoration: 'none',
+              fontFamily: 'Nunito, sans-serif',
+              fontWeight: 700,
+              fontSize: '14px',
             }}
           >
             <LinkedInIcon />
+            <span>Marie</span>
           </a>
         </div>
 
