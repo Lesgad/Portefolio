@@ -1,8 +1,16 @@
+## /!\ Précisions
+
+Dans le projet, les textes des avis dans les témoignages sont générés par IA, à
+des fins de démonstration. Les photos
+proviennent de [pravatar.cc](https://pravatar.cc) (photos libres de droits).
+Ce contenu peut être modifié ou supprimé à tout moment depuis
+`/admin/testimonials`.
+
 # Portefolio
 
-Ce projet est mon portfolio personnel, fait dans le cadre du challenge
+Ce projet est notre portfolio, fait en binôme dans le cadre du challenge
 front-end de l'école (React + TypeScript + Tailwind). L'objectif c'est de
-présenter mes projets, mon parcours, et de permettre aux gens de me
+présenter nos projets, notre parcours, et de permettre aux gens de nous
 contacter facilement, tout en ayant une petite interface d'administration
 pour gérer le contenu sans avoir à toucher au code à chaque fois.
 
@@ -15,10 +23,10 @@ pour gérer le contenu sans avoir à toucher au code à chaque fois.
 - **Vite** : pour le serveur de dev et le build, parce que c'est rapide et
   que la config est plus simple qu'avec Webpack.
 - **Tailwind CSS** : pour certains éléments (la navbar par exemple), même si
-  finalement j'ai utilisé beaucoup de styles inline aussi pour respecter
-  precisement les couleurs et tailles du design Figma. Avec le recul
-  j'aurais peut-être dû choisir une seule approche dès le début, mais ça
-  fonctionne quand même.
+  finalement nous avons utilisé beaucoup de styles inline aussi pour
+  respecter precisement les couleurs et tailles du design Figma. Avec le
+  recul nous aurions peut-être dû choisir une seule approche dès le début,
+  mais ça fonctionne quand même.
 - **react-router-dom v7** : pour la navigation entre les pages (Accueil,
   Contact, détails d'un projet, pages admin...) et pour le code splitting
   avec `React.lazy` + `Suspense`, qui est obligatoire dans le cahier des
@@ -33,9 +41,9 @@ pour gérer le contenu sans avoir à toucher au code à chaque fois.
 
 ## Pourquoi Firebase
 
-J'ai choisi Firebase (Authentication + Firestore) parce que c'était la
-solution qui me permettait d'avoir un vrai backend fonctionnel sans avoir à
-écrire et héberger un serveur moi-même, ce qui n'était clairement pas le
+Nous avons choisi Firebase (Authentication + Firestore) parce que c'était la
+solution qui nous permettait d'avoir un vrai backend fonctionnel sans avoir à
+écrire et héberger un serveur nous-mêmes, ce qui n'était clairement pas le
 sujet du challenge (le sujet c'est le front-end).
 
 - **Firebase Authentication (Google)** sert à protéger les routes `/admin/*`.
@@ -61,16 +69,30 @@ les règles de sécurité doivent autoriser la lecture publique de `projects` et
 `testimonials`, la création publique sur `contacts`, et le reste uniquement
 pour les utilisateurs connectés. Sinon tout reste bloqué et les pages
 affichent juste "aucun projet" ou "impossible de charger" sans message
-d'erreur très explicite, ce qui m'a pas mal fait galérer au début
+d'erreur très explicite, ce qui nous a pas mal fait galérer au début
 honnêtement.
+
+## Accès à l'administration
+
+Pour simplifier la connexion (et ne pas avoir à gérer un système d'invitation
+pour ce projet étudiant), **n'importe quel compte Google** peut se connecter
+via `/login` et accéder aux pages `/admin/*` : il n'y a pas de vérification
+d'adresse e-mail dans `RequireAuth`, ni dans les règles de sécurité Firestore.
+Le seul critère, c'est d'être authentifié.
+
+Dans un vrai contexte de production, nous aurions plutôt mis en place une liste
+blanche d'adresses e-mail autorisées (ou un rôle stocké dans Firestore),
+vérifiée côté client et dans les règles de sécurité Firestore, avec une
+invitation des nouveaux administrateurs plutôt qu'un accès libre à toute
+personne possédant un compte Google.
 
 ## Pourquoi EmailJS
 
 Le formulaire de contact enregistre déjà le message dans Firestore (visible
 depuis `/admin/contacts`), mais ça veut dire qu'il faut aller vérifier
-l'admin régulièrement pour voir si quelqu'un a écrit. J'ai donc ajouté
+l'admin régulièrement pour voir si quelqu'un a écrit. Nous avons donc ajouté
 **EmailJS** (`@emailjs/browser`) pour qu'un vrai email soit envoyé
-directement à mon adresse dès qu'un visiteur envoie le formulaire.
+directement à notre adresse dès qu'un visiteur envoie le formulaire.
 
 L'intérêt d'EmailJS c'est que ça envoie l'email directement depuis le
 navigateur, sans avoir besoin d'un serveur ou d'une fonction backend (ce
@@ -79,7 +101,7 @@ de créer un compte EmailJS, de relier sa boîte Gmail, de créer un template
 d'email, et de mettre les identifiants (Service ID, Template ID, Public Key)
 dans le `.env`. C'est sûrement pas la solution la plus "professionnelle"
 niveau sécurité (la clé publique se retrouve dans le code côté client), mais
-pour un portfolio étudiant je trouve que ça fait largement le travail.
+pour un portfolio étudiant nous trouvons que ça fait largement le travail.
 
 ## Structure du projet
 

@@ -12,10 +12,10 @@ export default function Hero() {
       <div
         style={{
           position: 'absolute',
-          right: '-80px',
-          top: '-248px',
-          width: '777px',
-          height: '877px',
+          right: '-50px',
+          top: '-10px',
+          width: '830px',
+          height: '725px',
           zIndex: 1,
           pointerEvents: 'none',
         }}
